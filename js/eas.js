@@ -13,9 +13,10 @@ function makeGrid(gridContainer, n) {
     }
 }
 
-function etch(e, color = "black") {
-    e.target.style.backgroundColor = color;
+function etch(e) {
+    e.target.classList.add("black");
 }
+
 
 // Function calls
 makeGrid(sketchpad, 16);
