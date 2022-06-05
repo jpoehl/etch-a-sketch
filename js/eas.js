@@ -1,11 +1,3 @@
-// Variables
-const sketchpad = document.getElementById("sketchpad");
-
-// Buttons
-//* Erase
-const eraseBtn = document.getElementById("eraser");
-eraseBtn.addEventListener("click", erase);
-
 // Functions
 function makeGrid(gridContainer, n) {
     gridContainer.style.gridTemplateColumns = `repeat(${n}, 1fr)`;
@@ -26,6 +18,15 @@ function erase(e) {
     const slates = document.querySelectorAll(".slate");
     slates.forEach(s => s.className = "slate");
 }
+
+// Variables
+const sketchpad = document.getElementById("sketchpad");
+
+// Buttons
+//* Erase
+const eraseBtn = document.getElementById("eraser");
+eraseBtn.addEventListener("click", erase);
+
 
 // Function calls
 makeGrid(sketchpad, 16);
