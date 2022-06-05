@@ -24,3 +24,7 @@ function erase(e) {
 
 // Function calls
 makeGrid(sketchpad, 16);
+
+// Erase
+const eraseBtn = document.getElementById("eraser");
+eraseBtn.addEventListener("click", erase);
