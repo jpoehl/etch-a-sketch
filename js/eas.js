@@ -17,6 +17,10 @@ function etch(e) {
     e.target.classList.add("black");
 }
 
+function erase(e) {
+    const slates = document.querySelectorAll(".slate");
+    slates.forEach(s => s.className = "slate");
+}
 
 // Function calls
 makeGrid(sketchpad, 16);
