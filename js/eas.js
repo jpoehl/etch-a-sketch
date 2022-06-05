@@ -10,7 +10,7 @@ function makeGrid(gridContainer, n) {
     }
 }
 
-function erase(e) {
+function erase() {
     const slates = document.querySelectorAll(".slate");
     slates.forEach(s => s.style.backgroundColor = "white");
     etchColor = "black";
@@ -38,6 +38,17 @@ function etch(e) {
     }
 
     e.target.style.backgroundColor = selectedColor;
+}
+
+function resize(container) {
+    let newSize;
+
+    do {
+        newSize = parseInt(prompt("How many slates per side do you want? Please specify a positive integer between 1 and 100."));
+    } while (newSize < 1 || newSize > 100 || isNaN(newSize));
+
+    erase();
+    makeGrid(container, newSize);
 }
 
 // Variables
