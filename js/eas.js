@@ -1,6 +1,7 @@
 // Functions
 function makeGrid(gridContainer, n) {
     gridContainer.style.gridTemplateColumns = `repeat(${n}, 1fr)`;
+    gridContainer.style.gridTemplateRows = `repeat(${n}, 1fr)`;
 
     for (let i = 1; i <= n * n; i++) {
         const slate = document.createElement("div");
