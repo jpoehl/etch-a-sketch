@@ -33,6 +33,20 @@ body {
     gap: 16px;
 }
 
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.button {
+    padding: 10px;
+    border: solid;
+    border-radius: 2px;
+    border-color: #000000;
+}
+
 #sketchpad {
     display: grid;
     width: 600px;
