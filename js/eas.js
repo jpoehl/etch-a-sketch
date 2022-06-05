@@ -19,6 +19,16 @@ function erase(e) {
     slates.forEach(s => s.className = "slate");
 }
 
+function getRandomColor() {
+    // https://stackoverflow.com/questions/10014271/generate-random-color-distinguishable-to-humans
+    const letters = '0123456789ABCDEF'.split('');
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.round(Math.random() * 15)];
+    }
+    return color;
+}
+
 // Variables
 const sketchpad = document.getElementById("sketchpad");
 
