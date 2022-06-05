@@ -40,7 +40,7 @@ function etch(e) {
     e.target.style.backgroundColor = selectedColor;
 }
 
-function resize(container) {
+function resize() {
     let newSize;
 
     do {
@@ -48,7 +48,7 @@ function resize(container) {
     } while (newSize < 1 || newSize > 100 || isNaN(newSize));
 
     erase();
-    makeGrid(container, newSize);
+    makeGrid(sketchpad, newSize);
 }
 
 // Variables
@@ -70,4 +70,6 @@ document.getElementById("colorBtn").addEventListener("input", (e) => etchColor =
 const eraseBtn = document.getElementById("eraser");
 eraseBtn.addEventListener("click", erase);
 
-
+//* Resize
+const resizeBtn = document.getElementById("resize");
+resizeBtn.addEventListener("click", resize);
