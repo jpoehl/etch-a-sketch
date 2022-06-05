@@ -31,24 +31,32 @@ function etch(e) {
 
     if (etchColor == "black") {
         selectedColor = "black";
-    } else {
+    } else if (etchColor == "random") {
         selectedColor = getRandomColor();
+    } else {
+        selectedColor = etchColor;
     }
 
     e.target.style.backgroundColor = selectedColor;
 }
 
 // Variables
+//* Store sketchpad in a variable for size manipulations
 const sketchpad = document.getElementById("sketchpad");
+
+// Function calls
+makeGrid(sketchpad, 16);
+
+//* Set etching colors - default and based on user choice
 let etchColor = "black";
 
 document.getElementById("randomBtn").addEventListener("click", () => etchColor = "random");
 document.getElementById("blackBtn").addEventListener("click", () => etchColor = "black");
+document.getElementById("colorBtn").addEventListener("input", (e) => etchColor = e.target.value);
 
 // Buttons
 //* Erase
 const eraseBtn = document.getElementById("eraser");
 eraseBtn.addEventListener("click", erase);
 
-// Function calls
-makeGrid(sketchpad, 16);
+
